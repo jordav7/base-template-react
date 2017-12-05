@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../../node_modules/font-awesome/css/font-awesome.min.css';
+import '../../node_modules/ionicons/dist/css/ionicons.min.css';
+import '../../node_modules/bootstrap-daterangepicker/daterangepicker.css';
+import '../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
+import '../../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css';
+
+import Header from './theme/Header';
+import Sidebar from './theme/Sidebar';
+import Content from './theme/Content';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="wrapper">
+        <Header />
+        <Sidebar />
+        <Content />
       </div>
     );
   }
