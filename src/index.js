@@ -10,9 +10,10 @@ global.jQuery = $;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
-require('jquery.inputmask/dist/jquery.inputmask.bundle');
+/*require('jquery.inputmask/dist/jquery.inputmask.bundle');
 require('bootstrap');
 require('bootstrap-daterangepicker');
 require('bootstrap-datepicker');
 require('bootstrap-colorpicker');
 require('bootstrap-timepicker');
+require('icheck');*/

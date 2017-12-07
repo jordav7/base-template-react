@@ -32,8 +32,8 @@ export default class Content extends Component {
                         <div className="col-md-6">
                         <div className="form-group">
                             <label>Minimal</label>
-                            <select className="form-control select2" style={{width: "100%"}}>
-                                <option selected="selected">Alabama</option>
+                            <select className="form-control select2" defaultValue="Alabama" style={{width: "100%"}}>
+                                <option></option>
                                 <option>Alaska</option>
                                 <option>California</option>
                                 <option>Delaware</option>
@@ -44,14 +44,14 @@ export default class Content extends Component {
                         </div>
                         <div className="form-group">
                             <label>Disabled</label>
-                            <select className="form-control select2" disabled="disabled" style={{width: "100%"}}>
-                            <option selected="selected">Alabama</option>
-                            <option>Alaska</option>
-                            <option>California</option>
-                            <option>Delaware</option>
-                            <option>Tennessee</option>
-                            <option>Texas</option>
-                            <option>Washington</option>
+                            <select className="form-control select2" defaultValue="Alabama" disabled="disabled" style={{width: "100%"}}>
+                                <option>Alabama</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
                             </select>
                         </div>
                         </div>
@@ -71,8 +71,8 @@ export default class Content extends Component {
                         </div>
                         <div className="form-group">
                             <label>Disabled Result</label>
-                            <select className="form-control select2" style={{width: "100%"}}>
-                                <option selected="selected">Alabama</option>
+                            <select className="form-control select2"  defaultValue="Alabama" style={{width: "100%"}}>
+                                <option>Alabama</option>
                                 <option>Alaska</option>
                                 <option disabled="disabled">California (disabled)</option>
                                 <option>Delaware</option>
@@ -250,7 +250,7 @@ export default class Content extends Component {
                         <div className="box-body">
                             <div className="form-group">
                                 <label>
-                                <input type="checkbox" className="minimal" checked/>
+                                <input type="checkbox" className="minimal" defaultChecked="true"/>
                                 </label>
                                 <label>
                                 <input type="checkbox" className="minimal"/>
@@ -262,7 +262,7 @@ export default class Content extends Component {
                             </div>                   
                             <div className="form-group">
                                 <label>
-                                <input type="radio" name="r1" className="minimal" checked/>
+                                <input type="radio" name="r1" className="minimal" defaultChecked="true"/>
                                 </label>
                                 <label>
                                 <input type="radio" name="r1" className="minimal"/>
@@ -274,7 +274,7 @@ export default class Content extends Component {
                             </div>
                             <div className="form-group">
                                 <label>
-                                <input type="checkbox" className="minimal-red" checked/>
+                                <input type="checkbox" className="minimal-red" defaultChecked="true"/>
                                 </label>
                                 <label>
                                 <input type="checkbox" className="minimal-red"/>
@@ -286,7 +286,7 @@ export default class Content extends Component {
                             </div>
                             <div className="form-group">
                                 <label>
-                                <input type="radio" name="r2" className="minimal-red" checked/>
+                                <input type="radio" name="r2" className="minimal-red" defaultChecked="true"/>
                                 </label>
                                 <label>
                                 <input type="radio" name="r2" className="minimal-red"/>
@@ -298,7 +298,7 @@ export default class Content extends Component {
                             </div>
                             <div className="form-group">
                                 <label>
-                                <input type="checkbox" className="flat-red" checked/>
+                                <input type="checkbox" className="flat-red" defaultChecked="true"/>
                                 </label>
                                 <label>
                                 <input type="checkbox" className="flat-red"/>
@@ -311,7 +311,7 @@ export default class Content extends Component {
 
                             <div className="form-group">
                                 <label>
-                                <input type="radio" name="r3" className="flat-red" checked/>
+                                <input type="radio" name="r3" className="flat-red" defaultChecked="true"/>
                                 </label>
                                 <label>
                                 <input type="radio" name="r3" className="flat-red"/>
@@ -329,9 +329,7 @@ export default class Content extends Component {
                 </div>
                 
             </div>
-            
-
-        </section>
+        </section> 
     </div>
         
     )

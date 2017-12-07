@@ -9,14 +9,25 @@ import '../../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.
 import Header from './theme/Header';
 import Sidebar from './theme/Sidebar';
 import Content from './theme/Content';
+import Footer from './theme/Footer';
 
 class App extends Component {
+
+  componentDidMount() {
+    const script = document.createElement('script');
+    script.src = process.env.PUBLIC_URL +   "/app/js/adminlte.min.js";
+    console.log(script.src);
+    script.async = true;
+    document.body.appendChild(script);
+  }
+
   render() {
     return (
       <div className="wrapper">
         <Header />
         <Sidebar />
         <Content />
+        <Footer />
       </div>
     );
   }
