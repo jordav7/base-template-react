@@ -29,7 +29,7 @@ export default class Header extends Component {
                         <li>
                           <a >
                             <div className="pull-left">
-                              <img src="../../dist/img/user2-160x160.jpg" className="img-circle" alt={"User"}/>
+                              <img src={process.env.PUBLIC_URL + '/app/img/user2-160x160.jpg'} className="img-circle" alt={"User"}/>
                             </div>
                             <h4>
                               Support Team
@@ -41,7 +41,7 @@ export default class Header extends Component {
                         <li>
                           <a >
                             <div className="pull-left">
-                              <img src="../../dist/img/user3-128x128.jpg" className="img-circle" alt={"User"}/>
+                              <img src={process.env.PUBLIC_URL + '/app/img/user3-128x128.jpg'} className="img-circle" alt={"User"}/>
                             </div>
                             <h4>
                               AdminLTE Design Team
@@ -53,7 +53,7 @@ export default class Header extends Component {
                         <li>
                           <a >
                             <div className="pull-left">
-                              <img src="../../dist/img/user4-128x128.jpg" className="img-circle" alt={"User"}/>
+                              <img src={process.env.PUBLIC_URL + '/app/img/user4-128x128.jpg'} className="img-circle" alt={"User"}/>
                             </div>
                             <h4>
                               Developers
@@ -65,7 +65,7 @@ export default class Header extends Component {
                         <li>
                           <a >
                             <div className="pull-left">
-                              <img src="../../dist/img/user3-128x128.jpg" className="img-circle" alt={"User"}/>
+                              <img src={process.env.PUBLIC_URL + '/app/img/user3-128x128.jpg'} className="img-circle" alt={"User"}/>
                             </div>
                             <h4>
                               Sales Department
@@ -77,7 +77,7 @@ export default class Header extends Component {
                         <li>
                           <a >
                             <div className="pull-left">
-                              <img src="../../dist/img/user4-128x128.jpg" className="img-circle" alt={"User"}/>
+                              <img src={process.env.PUBLIC_URL + '/app/img/user4-128x128.jpg'} className="img-circle" alt={"User"}/>
                             </div>
                             <h4>
                               Reviewers
