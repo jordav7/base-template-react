@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Content extends Component {
   render() {
     return (
         <div className="content-wrapper">
-            
             <section className="content-header">
                 <h1>
                     Advanced Form Elements
