@@ -16,7 +16,7 @@ export default class TreeView extends Component {
 
     constructor() {
         super();
-        this.showMenu = this.showMenu.bind(this);
+        this.toggle = this.toggle.bind(this);
     }
 
     renderIconBar(val) {
@@ -31,13 +31,13 @@ export default class TreeView extends Component {
         return subMenu;
     }
 
-    showMenu() {
+    toggle(e) {
 
     }
 
     renderLink(val) {
         if (val.children && val.children.length > 0) {
-            return <a onClick={this.showMenu}>
+            return <a onClick={this.toggle}>
                         <i className="fa fa-share"></i> <span>{val.label}</span>
                         {this.renderIconBar(val)}        
                     </a>
