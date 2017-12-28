@@ -32,7 +32,13 @@ export default class TreeView extends Component {
     }
 
     toggle(e) {
-
+        console.log('Entra a toggle');
+        console.log(e.target);
+        if(e.target.parentNode.classList.contains('menu-open')) {
+            e.target.parentNode.classList.remove('menu-open');
+        } else {
+            e.target.parentNode.classList.add('menu-open');
+        }
     }
 
     renderLink(val) {

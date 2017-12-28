@@ -8,7 +8,12 @@ export default class Sidebar extends Component {
         this.state = {
             menus: [
                 {label: 'Nuevo Item'},
-                {label: 'Nuevo Item'},
+                {
+                    label: 'Nuevo Item',
+                    children:[
+                        {label: 'SubItem'}
+                    ]
+                },
                 {label: 'Nuevo Item'}
             ]
         }
