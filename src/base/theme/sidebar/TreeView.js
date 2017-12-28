@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import SubTreeView from './SubTreeView';
 
@@ -6,12 +7,14 @@ export default class TreeView extends Component {
 
     static defaultProps = {
         id: null,
-        value: null
+        value: null,
+        className: null
     }
 
     static propTypes = {
         id: PropTypes.string,
-        value: PropTypes.array
+        value: PropTypes.array,
+        className: PropTypes.string
     }
 
     constructor() {
@@ -33,7 +36,7 @@ export default class TreeView extends Component {
 
     toggle(e) {
         console.log('Entra a toggle');
-        console.log(e.target);
+        console.log(e.target.parentNode);
         if(e.target.parentNode.classList.contains('menu-open')) {
             e.target.parentNode.classList.remove('menu-open');
         } else {
@@ -43,7 +46,7 @@ export default class TreeView extends Component {
 
     renderLink(val) {
         if (val.children && val.children.length > 0) {
-            return <a onClick={this.toggle}>
+            return <a >
                         <i className="fa fa-share"></i> <span>{val.label}</span>
                         {this.renderIconBar(val)}        
                     </a>
@@ -56,10 +59,12 @@ export default class TreeView extends Component {
     }
 
     render() {  
+        let className = classNames('treeview');     
+       
         return (      
             this.props.value.map((val, i) => {
                 return (
-                    <li key={i + '_treeMenuView'} className="treeview">
+                    <li key={i + '_treeMenuView'} className={className} onClick={this.toggle}>
                         {this.renderLink(val)}
                         {this.renderSubmenu(val)}
                     </li>
