@@ -11,7 +11,14 @@ export default class Sidebar extends Component {
                 {
                     label: 'Nuevo Item',
                     children:[
-                        {label: 'SubItem'}
+                        {
+                            label: 'SubItem',
+                            children:[
+                                {
+                                    label: 'SubItem2'
+                                }
+                            ]
+                        }
                     ]
                 },
                 {label: 'Nuevo Item'}
