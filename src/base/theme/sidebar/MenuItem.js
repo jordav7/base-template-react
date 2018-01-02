@@ -43,7 +43,7 @@ export default class MenuItem extends Component {
 
     renderLink(val) {
         if (val.children && val.children.length > 0) {
-            return <a >
+            return <a onClick={this.toggle}>
                         <i className="fa fa-share"></i> <span>{val.label}</span>
                         {this.renderIconBar(val)}        
                     </a>
@@ -63,7 +63,7 @@ export default class MenuItem extends Component {
     render() {
         let className = classNames('treeview', {'menu-open': this.state.open});         
         return (
-            <li className={className} onClick={this.toggle}>
+            <li className={className}>
                 {this.renderLink(this.props.value)}
                 {this.renderSubmenu(this.props.value, this.state.open)}
             </li>

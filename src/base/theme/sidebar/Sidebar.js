@@ -12,12 +12,26 @@ export default class Sidebar extends Component {
                     label: 'Nuevo Item',
                     children:[
                         {
-                            label: 'SubItem',
+                            label: 'SubItem1',
                             children:[
                                 {
-                                    label: 'SubItem2'
+                                    label: 'SubSubItem1'
+                                },
+                                {
+                                    label: 'SubSubItem2',
+                                    children: [
+                                        {
+                                            label: 'SubSubSubItem1'
+                                        }
+                                    ]
+                                },
+                                {
+                                    label: 'SubSubItem3'
                                 }
                             ]
+                        },
+                        {
+                            label: 'SubItem2'
                         }
                     ]
                 },

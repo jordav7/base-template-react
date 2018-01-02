@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import MenuItem from './MenuItem'
 
 export default class SubTreeView extends Component {
 
@@ -17,8 +18,7 @@ export default class SubTreeView extends Component {
 
     
 
-    render() {        
-        console.log(this.props.value);
+    render() {                
         let opened = this.props.opened;
         let style = {};
         if (opened) {
@@ -44,6 +44,15 @@ class ListMenu extends Component {
         id: PropTypes.string,
         value: PropTypes.array
     }
+
+    constructor(props) {
+        super(props);
+        this.toggle.bind(this);
+    }
+
+    toggle() {
+        console.log('nuevo log');
+    }
     
     renderTreeMenu() {
         console.log(console.log('Tamano submenu::'+this.props.value.length));
@@ -67,16 +76,8 @@ class ListMenu extends Component {
     }
 
     render() {
-        return this.props.value.map((val, i) => {
-            console.log('Ingreso a renderizar submenu');
-            let subtreeMenu = (<li key={i + '_subTreeMenuView'} className="treeview">
-                <a >
-                    <i className="fa fa-share"></i> <span>{val.label}</span>
-                    {this.renderIconBar(val)}        
-                </a>
-                {this.renderChildren(val)}               
-            </li>);            
-            return subtreeMenu;
+        return this.props.value.map((val, i) => {            
+            return <MenuItem key={i + '_subTreeItem'} value={val}/>               
         });
         
     }
