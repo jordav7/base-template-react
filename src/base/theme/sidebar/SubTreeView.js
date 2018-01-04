@@ -16,70 +16,21 @@ export default class SubTreeView extends Component {
         opened: PropTypes.bool
     }
 
-    
-
-    render() {                
-        let opened = this.props.opened;
-        let style = {};
-        if (opened) {
-            style = Object.assign(style, {display: 'block'});
-        } else {
-            style = Object.assign(style, {display: 'none'});
-        }
-        return (
-            <ul className="treeview-menu" style={style}>
-                <ListMenu value={this.props.value} />
-            </ul>
-        );
-    }
-}
-
-class ListMenu extends Component {
-    static defaultProps = {
-        id: null,
-        value: []
-    }
-
-    static propTypes = {
-        id: PropTypes.string,
-        value: PropTypes.array
-    }
-
-    constructor(props) {
-        super(props);
-        this.toggle.bind(this);
-    }
-
-    toggle() {
-        console.log('nuevo log');
-    }
-    
-    renderTreeMenu() {
-        console.log(console.log('Tamano submenu::'+this.props.value.length));
-        
-    }
-
-    renderIconBar(val) {
-        let icon = (val.children && val.children.length) ? (<span className="pull-right-container">
-                        <i className="fa fa-angle-left pull-right"></i>
-                    </span>) : null;
-        return icon;
-    }
-
-    renderSubMenu(menu) {
-        return (<SubTreeView value={menu.children}/>);
-    }
-
-    renderChildren(menu) {
-        let submenu = (menu.children && menu.children.length > 0) ? this.renderSubMenu(menu) : null;
-        return submenu;
-    }
-
-    render() {
+    renderSubmenu() {
         return this.props.value.map((val, i) => {            
             return <MenuItem key={i + '_subTreeItem'} value={val}/>               
         });
         
     }
-}
 
+    render() {                
+        let opened = this.props.opened;
+        let style = {};        
+        style = Object.assign(style, {display: opened ? 'block' : 'none'});
+        return (
+            <ul className="treeview-menu" style={style}>
+                {this.renderSubmenu()}
+            </ul>
+        );
+    }
+}

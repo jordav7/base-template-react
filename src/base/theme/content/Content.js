@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Switch} from 'react-router-dom';
 
 export default class Content extends Component {
   render() {
@@ -16,7 +17,9 @@ export default class Content extends Component {
                 </ol>
                 </section>
                 <section className="content">
-
+                    <Switch>
+                        
+                    </Switch>
                 <div className="box box-default">
                     <div className="box-header with-border">
                     <h3 className="box-title">Select2</h3>

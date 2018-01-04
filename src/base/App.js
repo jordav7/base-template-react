@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {BrowserRouter} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'ionicons/dist/css/ionicons.min.css';
@@ -33,12 +34,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="wrapper">
-        <Header />
-        <Sidebar />
-        <Content />
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <div className="wrapper">
+          <Header />
+          <Sidebar />
+          <Content />
+          <Footer />
+        </div>
+      </BrowserRouter>
     );
   }
 }
