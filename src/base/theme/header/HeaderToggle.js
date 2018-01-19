@@ -66,7 +66,7 @@ export default class HeaderToogle extends Component {
         } else {
             document.body.classList.remove(this.state.classNames.open, this.state.classNames.collapsed);
         }
-        this.collapse();
+        //this.collapse();
     }
 
     expand() {
