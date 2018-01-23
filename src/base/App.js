@@ -14,22 +14,7 @@ import Footer from './theme/footer/Footer';
 class App extends Component {
 
   componentDidMount() {
-    //this.addScriptMain();
-    //this.addStyleMain();
-  }
-
-  addScriptMain() {
-    const script = document.createElement('script');
-    script.src = process.env.PUBLIC_URL +   "/app/js/adminlte.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }
-
-  addStyleMain() {
-    const style = document.createElement('link');
-    style.rel = 'stylesheet';
-    style.href = process.env.PUBLIC_URL +   "/app/css/AdminLTE.min.css";
-    document.head.appendChild(style);
+    
   }
 
   render() {
